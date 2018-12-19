@@ -132,4 +132,9 @@ def annotate_video(video_path, write = False):
 if __name__ == "__main__":
     video_path = sys.argv[1]
     print('Reading video', sys.argv[1])
-    annotate_video(video_path, write = False)
+
+    # write output or not
+    if(len(sys.argv) == 3):
+        write = sys.argv[2]
+        
+    annotate_video(video_path, write = write)
